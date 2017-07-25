@@ -19,11 +19,13 @@
 - **lohbs_chatbot/application/public** 이곳에 **.htaccess** 만들어서 아래와 같은 코드 넣는다.
 - *경로 설정때문에 필수!!*
 
-    \`RewriteEngine on
+    ```
+    RewriteEngine on
     RewriteCond %{REQUEST_URI} !^/include/js/(.*)$
     RewriteCond $1 !^(index\.php|css|img|images|ajax|fonts|sound|data|channels|_down|js|_uploads|robots\.txt)
     RewriteCond %{REQUEST_URI} !^/include/(.*)$
-    RewriteRule ^(.*)$ /index.php/$1 [L] \`
+    RewriteRule ^(.*)$ /index.php/$1 [L] 
+    ```
 
 
 
@@ -40,7 +42,7 @@
 
 ## Chatbot 경로
 
-- /main/chat   *(여기 소스에는 사용자 key 넣지 않아서 챗봇 실행 안됨)
+- /main/chat   *(여기 소스에는 사용자 key 넣지 않아서 챗봇 실행 안됨)*
 
 ---
 
