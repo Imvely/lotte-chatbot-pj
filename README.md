@@ -12,6 +12,8 @@
 
 
 
+
+
 ## .htaccess
 
 - **lohbs_chatbot/application/public** 이곳에 **.htaccess** 만들어서 아래와 같은 코드 넣는다.
@@ -24,11 +26,19 @@
     RewriteRule ^(.*)$ /index.php/$1 [L] \`
 
 
+
+
+
 ## AMP 프로그램 사용시
 
 - 경로는 **lohbs_chatbot/application/public** 로 잡아줌
 
-# Chatbot 경로
+
+
+
+
+
+## Chatbot 경로
 
 - /main/chat   *(여기 소스에는 사용자 key 넣지 않아서 챗봇 실행 안됨)
 
