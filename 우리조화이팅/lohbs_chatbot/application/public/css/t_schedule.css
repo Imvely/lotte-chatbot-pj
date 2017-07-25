@@ -1,0 +1,140 @@
+
+._19ic {
+margin-left:50px;
+margin-top:5px;
+}
+
+._5sn9 {
+  background: white;
+  border: 1px solid #d3d3d3;
+  padding-bottom: 20px;
+  padding-top: 12px;
+  width: 520px;
+  height: 300px;
+  font-family:'lucida grande',tahoma,verdana,arial,sans-serif;
+  font-size:11px;
+}
+
+
+._5sn9 div {
+float:left;
+}
+
+
+.t_cell {
+position: relative;
+background-color:#f6f7f8;
+border-bottom:1px solid #bdbfc4;
+height:30px;
+width:15px;
+}
+
+/* 좌측 요일 cell */
+.week_cell {
+height:30px;
+line-height:30px;
+text-align:right;
+width:50px;
+display:inline-block;
+margin-right:10px;
+}
+
+/* 일 0번째 셀 좌우 보더 */
+.first_cell {
+border-left:1px solid #bdbfc4;
+border-right:1px solid #fff;
+}
+
+/* 3,6,9..셀의 우측 보더 설정 */
+.b_r_369 {
+border-right:1px solid #bdbfc4;
+}
+
+.b_r_white {
+border-right:1px solid #fff;
+}
+
+
+.t_cell.selected {
+background:0;
+background-color:#5870a8;
+border-right:1px solid #6d84b4;
+}
+
+._516t .hourStatus-selected {
+background-color:#5870a8;
+border-right:1px solid #6d84b4;
+}
+
+
+/* 시간 표시 cell */
+.t_txt_cell {
+border-right:1px solid #FFF;
+float:left;
+font-weight:700;
+padding-bottom:5px;
+width:43px;
+}
+
+/* 시간 temp cell */
+.time_temp {
+border-right:1px solid #FFF;
+float:left;
+height:1px;
+width:1px;
+}
+
+/* 하루종일 title */
+.day_all_txt {
+border-left:1px solid #FFF;
+float:left;
+font-weight:700;
+margin-left:5px;
+padding-bottom:5px;
+width:100px;
+}
+
+/* 하루종일 cell*/
+.day_cell {
+background-color:#fff;
+border-bottom:1px solid #bdbfc4;
+border-left:1px solid #bdbfc4;
+border-right:1px solid #bdbfc4;
+cursor:pointer;
+float:left;
+height:30px;
+margin-left:4px;
+width:45px;
+}
+
+
+/* 하단 매일 cell 배경 흰색 처리 */
+.bottom_cell .t_cell {
+background-color:#fff;
+border-top:1px solid #bdbfc4;
+margin-top:4px;
+}
+
+.bottom_cell .t_cell.selected {
+background:0;
+background-color:#5870a8;
+}
+
+/* 최상단 열(월요일) 탑 줄 */
+._8-v .t_cell,._8-v .day_cell {
+border-top:1px solid #bdbfc4;
+}
+
+
+div.t_cell .drag-cell {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height:30px;
+	width:15px;
+	cursor:pointer;
+}
+div.t_cell.day_cell .drag-cell {
+	height:30px;
+	width:45px;
+}
