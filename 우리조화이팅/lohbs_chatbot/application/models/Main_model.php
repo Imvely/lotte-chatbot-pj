@@ -6,4 +6,15 @@ class Main_model extends CI_Model
   {
     parent::__construct();
   }
+
+  function chat_r($data = array())
+  {
+    $sql = "INSERT INTO `chatbot` (chat, del_flag) 
+    VALUES (?, 'N')";
+    $this->db->query($sql,
+      array(
+        $data['info']
+        ));
+    return $this->db->insert_id();
+  }
 }

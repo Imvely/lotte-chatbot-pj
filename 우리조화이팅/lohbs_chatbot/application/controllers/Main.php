@@ -19,6 +19,29 @@ class Main extends CI_Controller {
     $data = array();
     $this->load->view('lohbs/chat', $data);
   }
+
+  public function data()
+  {
+    $info = $_POST['info'];
+    if (substr($info, -3) == "won"){
+       error_log($info); 
+    }
+   
+    
+    //error_log($info);
+  }
+
+  public function search_cos()
+  {
+    $data = array();
+    $this->load->view('lohbs/search_cos', $data);
+  }
+
+  public function report()
+  {
+    $data = array();
+    $this->load->view('lohbs/report', $data);
+  }
 }
 
 

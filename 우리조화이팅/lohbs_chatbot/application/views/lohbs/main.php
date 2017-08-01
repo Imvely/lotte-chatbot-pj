@@ -13,6 +13,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<!-- #End Bootstrap -->
+  	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/lohbs.css" type="text/css">
     <link href="/img/favicon/favicon.png" rel="shortcut icon" type="image/x-icon" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -37,6 +41,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-5TQBJ5N');</script>
 	<!-- End Google Tag Manager -->
+
+	<script type="text/javascript">
+		window.onload =function () {
+			window.open("/main/chat",  "chat-popup", "width=720, height=900");
+		}
+	</script>
 </head>
 <body>
     <div id="lohbsWrap">
