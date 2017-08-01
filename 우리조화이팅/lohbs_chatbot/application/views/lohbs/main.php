@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<script type="text/javascript">
 		window.onload =function () {
-			window.open("/main/chat",  "chat-popup", "width=720, height=900");
+			window.open("/main/chat",  "chat-popup", "width=360, height=700");
 		}
 	</script>
 </head>
