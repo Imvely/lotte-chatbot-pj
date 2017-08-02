@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+?>
 <html>
 
 <head>
@@ -24,7 +24,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	font-family: 'Hanna', serif;
 	
 		html, body {overflow: hidden; }
-
 		input#wisdom {
 			border: none;
 			height: 100%;
@@ -34,13 +33,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			outline-width: 0;
 			color: gray;
 		}
-
+		
 		input::placeholder {
-			font-size: 18px;
+			font-size: 16px;
 			color: #ccc;
-			font-style: italic;
+			
 		}
-
 		p.userRequest {
 			margin: 4px;
 			padding: 4px 10px 4px 10px;
@@ -54,7 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 			color:SaddleBrown;
 		}
-
 		p.lexResponse {
 			margin: 4px;
 			padding: 4px 10px 4px 10px;
@@ -69,7 +66,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			color:#003366;
 			
 		}
-
 		p.lexError {
 			margin: 4px;
 			padding: 4px 10px 4px 10px;
@@ -104,7 +100,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			background-color: #ff4e00;;
 			width: 100%;
 			height: 80px;
-			padding: 20px 0 15px;
+			padding:4px 0 15px;
 			box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
 		}
 		.top_menu .title {
@@ -121,7 +117,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			position: relative;
 			padding: 0 20px;
 }
-
 		.bottom_wrapper {
 			position: relative;
 			width: 350px;
@@ -130,9 +125,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			position: absolute;
 			bottom: 0;
 		}
-		.send_message {
+	.send_message {
 			width: 70px;
-			height: 40px;
+			height: 35px;
 			display: inline-block;
 			border-radius: 50px;
 			background-color: #636466;	
@@ -141,17 +136,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			transition: all 0.2s linear;
 			text-align:center;	
 			float: right;
-			padding: 20px 10px 10px 10px;
+			padding: 18px 10px 10px 10px;
 			
 		}	
 		.send_message:hover {
 			color: #fff;
 			background-color: #ff4e00;
 		}
-
 		.text {
-
-			font-size: 17px;
+			font-size: 16px;
 			font-weight: 300;
 			display: inline-block;
 			line-height: 0px;
@@ -159,12 +152,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 		}
 		.logo{
-			width:144px;
-			height:25px;
+			width:270px;
+			height:85px;
+	
 		}
-
+		
 		/*file upload*/
-
 		.filebox input[type="file"] {
 		    position: absolute;
 		    width: 1px;
@@ -175,7 +168,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    clip:rect(0,0,0,0);
 		    border: 0;
 		}
-
 		.filebox label {
 		    display: inline-block;
 		    padding: .5em .75em;
@@ -189,7 +181,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    border-bottom-color: #e2e2e2;
 		    border-radius: .25em;
 		}
-
 		/* named upload */
 		.filebox .upload-name {
 		    display: inline-block;
@@ -207,15 +198,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		  -moz-appearance: none;
 		  appearance: none;
 		}
-
 		/* imaged preview */
+		
 		.filebox .upload-display {
 		    margin-bottom: 5px;
 		    position: absolute;
 		    bottom: 10px;
 		    left: 80px;
 		}
-
 		@media(min-width: 768px) {
 		    .filebox .upload-display {
 		        display: inline-block;
@@ -223,11 +213,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		        margin-bottom: 0;
 		    }
 		}
-
 		.upload-thumb{
 			height: 100px;
 		}
-
 		.filebox .upload-thumb-wrap {
 		    display: inline-block;
 		    width: 200px;
@@ -238,24 +226,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    border-radius: 5px;
 		    background-color: #fff;
 		}
-
 		.filebox .upload-display img {
 		    display: block;
 		    max-width: 100%;
 		    width: 100% \9;
 		    height: auto;
 		}
-
 		.filebox.bs3-primary label {
 		  color: #fff;
 		  background-color: #636466;
 		}
-
 		.filebox.bs3-primary label:hover {
 			color: #fff;
 			background-color: #ff4e00;
 		}
-
 		#input_submit {
 			border: 0px;
 		    text-decoration:none;
@@ -275,15 +259,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			color:white;
 			z-index: 999;
 			position: absolute;
-			top: 37px;
-			left: 253px;
-			color: gray;
+			top: 35px;
+			left: 278px;
+			color: silver;
 			font-weight: bold;
-			font-size: 15px;
+			font-size: 10px;
 			text-decoration: none;
-			border: 1px solid gray;
-			border-radius: 25px;
-			padding: 5px 8px 5px 8px;
+			border: 2px solid silver;
+			border-radius: 21px;
+			padding: 5px 5px 5px 5px;
 		}
 		/*report*/
 	</style>
@@ -292,12 +276,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 <div class="chat_window" style="height: 700px;">
 	<div class="top_menu">
-	<img class = logo src="/img/logo/lohbs_logo_white.png" style="margin-left: auto; margin-right: auto; display: block;">
-	<div class="title">BOT</div>
+	<img class = logo src="/img/logo/logo.png" style="margin-left: auto; margin-right: auto; display: block;">
+	
 	<a id="report" href="/main/report" target="_blank">REPORT</a>
 		
 	</div>
-	<div id="conversation" style="height: calc(90%); padding: 20px 10px 0 10px;transition: all 0.5s linear;margin-bottom: 20px;position: relative; border: 1px solid #ccc; background-color: #eee; padding: 4px; overflow: scroll"></div>
+	<div id="conversation" style="height: calc(60%); padding: 20px 10px 0 10px;transition: all 0.5s linear;margin-bottom: 20px;position: relative; border: 1px solid #ccc; background-color: #eee; padding: 4px; overflow: scroll"></div>
 	<div class="bottom_wrapper clearfix" style="height: 220px;">
 	<form id="chatform" style="" onsubmit="return pushChat();">
 		<div class="message_input_wrapper" >
@@ -312,9 +296,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<form action="" method="post" enctype="multipart/form-data">
 
 		<div class="filebox bs3-primary preview-image" style="margin-top: 15px;">
-	        <input class="upload-name" value="파일선택" disabled="disabled" style="border-radius: 25px; width: 165px;">
+	        <input class="upload-name" value="파일선택" disabled="disabled" style="border-radius: 25px; width: 165px;color: #ccc;">
 
-	        <label style="font-size: 17px;margin-left: 4px; padding: 5px 8px 8px 8px; border-radius: 50px; margin-top: 2px;" for="input_file">search</label> 
+	        <label style="font-size: 17px;margin-left: 5px; padding: 6px 8px 8px 8px; border-radius: 50px; margin-top: 2px;" for="input_file">search</label> 
 	        <input type="file" id="input_file" class="upload-hidden"> 
 	      	<input type="submit" value="upload" id="input_submit" class="upload-hidden">
 	    </div>
@@ -329,32 +313,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script type="text/javascript">
 		// set the focus to the input box
 		document.getElementById("wisdom").focus();
-
 		// Initialize the Amazon Cognito credentials provider
 		AWS.config.region = 'us-east-1'; // Region
 		AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 		// Provide your Pool Id here
-			IdentityPoolId: 'us-east-1:XXXXX',
+			IdentityPoolId: 'us-east-1:1fc6a88c-f75e-49fc-90c1-c8bd47b501e3',
 		});
-
 		var lexruntime = new AWS.LexRuntime();
 		var lexUserId = 'chatbot-demo' + Date.now();
 		var sessionAttributes = {};
-
 		function pushChat() {
-
 			// if there is text to be sent...
 			var wisdomText = document.getElementById('wisdom');
-
 			if (wisdomText && wisdomText.value && wisdomText.value.trim().length > 0) {
-
 				// disable input to show we're sending it
 				var wisdom = wisdomText.value.trim();
 				wisdomText.value = '...';
 				wisdomText.locked = true;
-
 				//var jsonData = JSON.stringify(wisdom);
-
 				// send it to the Lex runtime
 				var params = {
 					botAlias: '$LATEST',
@@ -363,10 +339,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					userId: lexUserId,
 					sessionAttributes: sessionAttributes
 				};
-
 				//alert(wisdom);
 				var info = wisdom;
-
 				$.ajax({
 				  type: 'post'
 				  , url: '/main/data'
@@ -381,7 +355,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				    //alert('success');
 				  }
 				});
-
 				showRequest(wisdom);
 				lexruntime.postText(params, function(err, data) {
 					if (err) {
@@ -392,7 +365,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						// capture the sessionAttributes for the next cycle
 						sessionAttributes = data.sessionAttributes;
 						// show response and/or error/dialog status
+						if(wisdom != "20000"){
 						showResponse(data);
+						}else {
+							data.message = "ttttttttt";
+							showResponse(data);
+						}
 					}
 					// re-enable input
 					wisdomText.value = '';
@@ -402,9 +380,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			// we always cancel form submission
 			return false;
 		}
-
 		function showRequest(daText) {
-
 			var conversationDiv = document.getElementById('conversation');
 			var requestPara = document.createElement("P");
 			requestPara.className = 'userRequest';
@@ -412,9 +388,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			conversationDiv.appendChild(requestPara);
 			conversationDiv.scrollTop = conversationDiv.scrollHeight;
 		}
-
 		function showError(daText) {
-
 			var conversationDiv = document.getElementById('conversation');
 			var errorPara = document.createElement("P");
 			errorPara.className = 'lexError';
@@ -422,9 +396,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			conversationDiv.appendChild(errorPara);
 			conversationDiv.scrollTop = conversationDiv.scrollHeight;
 		}
-
 		function showResponse(lexResponse) {
-
+			//console.log(lexResponse.message);
 			var conversationDiv = document.getElementById('conversation');
 			var responsePara = document.createElement("P");
 			responsePara.className = 'lexResponse';
@@ -443,34 +416,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			conversationDiv.appendChild(responsePara);
 			conversationDiv.scrollTop = conversationDiv.scrollHeight;
 		}
-
-
-
 		// file upload
 		$(document).ready(function(){
    var fileTarget = $('.filebox .upload-hidden');
-
     fileTarget.on('change', function(){
         if(window.FileReader){
             // 파일명 추출
             var filename = $(this)[0].files[0].name;
         } 
-
         else {
             // Old IE 파일명 추출
             var filename = $(this).val().split('/').pop().split('\\').pop();
         };
-
         $(this).siblings('.upload-name').val(filename);
     });
-
     //preview image 
     var imgTarget = $('.preview-image .upload-hidden');
-
     imgTarget.on('change', function(){
         var parent = $(this).parent();
         parent.children('.upload-display').remove();
-
         if(window.FileReader){
             //image 파일만
             if (!$(this)[0].files[0].type.match(/image\//)) return;
@@ -482,22 +446,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
             reader.readAsDataURL($(this)[0].files[0]);
         }
-
         else {
             $(this)[0].select();
             $(this)[0].blur();
             var imgSrc = document.selection.createRange().text;
             parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img class="upload-thumb"></div></div>');
-
             var img = $(this).siblings('.upload-display').find('img');
             img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")";        
         }
     });
 });
 		// fileupload
-
 	</script>
 </body>
 
 </html>
-
