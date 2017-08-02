@@ -204,7 +204,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    margin-bottom: 5px;
 		    position: absolute;
 		    bottom: 10px;
-		    left: 80px;
+		    left: 140px;
 		}
 		@media(min-width: 768px) {
 		    .filebox .upload-display {
@@ -218,7 +218,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}
 		.filebox .upload-thumb-wrap {
 		    display: inline-block;
-		    width: 200px;
+		    width: 80px;
 		    height: 100px;
 		    padding: 2px;
 		    vertical-align: middle;
@@ -317,7 +317,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		AWS.config.region = 'us-east-1'; // Region
 		AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 		// Provide your Pool Id here
-			IdentityPoolId: 'us-east-1:1fc6a88c-f75e-49fc-90c1-c8bd47b501e3',
+			IdentityPoolId: 'us-east-1:XXXXXXX',
 		});
 		var lexruntime = new AWS.LexRuntime();
 		var lexUserId = 'chatbot-demo' + Date.now();
@@ -365,10 +365,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						// capture the sessionAttributes for the next cycle
 						sessionAttributes = data.sessionAttributes;
 						// show response and/or error/dialog status
-						if(wisdom != "20000"){
+						if(wisdom != "20000" && wisdom != "cheapest won" && wisdom != "hot keyword" && wisdom != "give me list of cleansers"){
 						showResponse(data);
-						}else {
-							data.message = "test";
+						}else if(wisdom == "20000"){//bb
+							data.message = "bb";
+							showResponse(data);
+						}else if(wisdom.substring(0,8) == "cheapest"){//lip
+							data.message = "lip";
+							showResponse(data);
+						}else if(wisdom == "give me list of cleansers"){//추천
+							data.message = "choice";
+							showResponse(data);
+						}else if(wisdom == "hot keyword"){//report
+							data.message = "report";
 							showResponse(data);
 						}
 					}
@@ -380,66 +389,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			// we always cancel form submission
 			return false;
 		}
-
-
-
-		function pushImg() {
-			// if there is text to be sent...
-			var wisdomImg = document.getElementById('img_upload');
-			var wisdom = wisdomImg.value.trim();
-				wisdomImg.value = '...';
-				wisdomImg.locked = true;
-
-			if (wisdomImg && wisdomImg.value && wisdomImg.value.trim().length > 0) {
-				// disable input to show we're sending it
-				imgRequest(wisdom);
-				// interval
-				imgResponse(wisdom);
-				}
-
-
-
-			// we always cancel form submission
-			return false;
-		}
-
-		function imgRequest(daText) {
-
-			var conversationDiv = document.getElementById('conversation');
-			var requestPara = document.createElement("P");
-			requestPara.className = 'userRequest';
-			var imgPara = document.createElement("img");
-			imgPara.src = "http://pds.joins.com/news/component/moneytoday/201211/06/2012110613573417444_1.jpg"; //+ daText;
-			imgPara.height = 300;
-			imgPara.width = 200;
-			requestPara.appendChild(imgPara);
-			// requestPara.appendChild(document.createTextNode("    "));//+daText));
-			conversationDiv.appendChild(requestPara);
-			conversationDiv.scrollTop = conversationDiv.scrollHeight;
-		}
-
-		function imgResponse(lexResponse) {
-
-			var conversationDiv = document.getElementById('conversation');
-			var responsePara = document.createElement("P");
-			responsePara.className = 'lexResponse';
-			var imgPara = document.createElement("img");
-			imgPara.height = 300;
-			imgPara.width = 200;
-
-			if(lexResponse == "파일선택"){
-			imgPara.src = "http://image.newstomato.com/newsimg/2013/5/27/366864/1.jpg";
-			}else{// }else if(lexResponse == "test.jpg"){
-			imgPara.src = "http://pds.joins.com/news/component/moneytoday/201211/06/2012110613573417444_1.jpg";
-			}
-			responsePara.appendChild(imgPara);
-
-			conversationDiv.appendChild(responsePara);
-			conversationDiv.scrollTop = conversationDiv.scrollHeight;
-		}
-
-
-
 
 		function showRequest(daText) {
 			var conversationDiv = document.getElementById('conversation');
@@ -462,7 +411,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			var conversationDiv = document.getElementById('conversation');
 			var responsePara = document.createElement("P");
 			responsePara.className = 'lexResponse';
-			if(lexResponse.message == "test"){
+			if(lexResponse.message == "bb"){
 				//responsePara.appendChild(document.createTextNode(lexResponse.message));
 				responsePara.appendChild(document.createElement('br'));
 
@@ -491,6 +440,118 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				a_tag.appendChild(document.createTextNode(price));
 				//document.createTextNode(text);
 
+			}else if (lexResponse.message == "lip"){//lip
+				//responsePara.appendChild(document.createTextNode(lexResponse.message));
+				responsePara.appendChild(document.createElement('br'));
+
+				var responsePara = document.createElement("P");
+				responsePara.className = 'lexResponse';
+				responsePara.style="font-size:12px;"
+
+				var a_tag = document.createElement("a");
+				//responsePara.appendChild(document.createTextNode("Anchor"));
+				a_tag.href = "http://localhost/main/lip";
+				a_tag.alt = "Flash and JS are not enemies!";
+				a_tag.target = "_blank";
+				a_tag.style = "_blank";
+				//a_tag.appendChild(createTextNode("a"));
+
+				responsePara.appendChild(a_tag);
+				var img = document.createElement("img");
+				img.style="width: 200px;"
+				img.src = "https://s3.amazonaws.com/testbot170724/chatbot/img/97.jpg";
+				a_tag.appendChild(img);
+
+				var text = "Peripera (Kitten balm)";
+				var price = "8000 won";
+				a_tag.appendChild(document.createTextNode(text));
+				a_tag.appendChild(document.createElement('br'));
+				a_tag.appendChild(document.createTextNode(price));
+				//document.createTextNode(text);
+			}else if (lexResponse.message == "choice"){
+				//responsePara.appendChild(document.createTextNode(lexResponse.message));
+				responsePara.appendChild(document.createElement('br'));
+
+				var responsePara = document.createElement("P");
+				responsePara.className = 'lexResponse';
+				responsePara.style="font-size:12px;"
+
+				var a_tag = document.createElement("a");
+				//responsePara.appendChild(document.createTextNode("Anchor"));
+				a_tag.href = "http://localhost/main/bbcream";
+				a_tag.alt = "Flash and JS are not enemies!";
+				a_tag.target = "_blank";
+				a_tag.style = "_blank";
+				//a_tag.appendChild(createTextNode("a"));
+
+				responsePara.appendChild(a_tag);
+				var img = document.createElement("img");
+				img.style="width: 200px;"
+				img.src = "https://s3.amazonaws.com/testbot170724/chatbot/img/cleanser1.jpg";
+				a_tag.appendChild(img);
+
+				var text = "VICHY (Cleansing gell)";
+				var price = "19900 won";
+				a_tag.appendChild(document.createTextNode(text));
+				a_tag.appendChild(document.createElement('br'));
+				a_tag.appendChild(document.createTextNode(price));
+
+
+
+				responsePara.appendChild(document.createElement('br'));
+
+				var responsePara2 = document.createElement("P");
+				responsePara2.className = 'lexResponse';
+				responsePara2.style="font-size:12px;"
+
+				var a_tag = document.createElement("a");
+				//responsePara2.appendChild(document.createTextNode("Anchor"));
+				a_tag.href = "http://localhost/main/bbcream";
+				a_tag.alt = "Flash and JS are not enemies!";
+				a_tag.target = "_blank";
+				a_tag.style = "_blank";
+				//a_tag.appendChild(createTextNode("a"));
+
+				responsePara2.appendChild(a_tag);
+				var img = document.createElement("img");
+				img.style="width: 200px;"
+				img.src = "https://s3.amazonaws.com/testbot170724/chatbot/img/cleanser2.jpg";
+				a_tag.appendChild(img);
+
+				var text = "LA ROCHE-POSAY (Cleanser)";
+				var price = "18000 won";
+				a_tag.appendChild(document.createTextNode(text));
+				a_tag.appendChild(document.createElement('br'));
+				a_tag.appendChild(document.createTextNode(price));
+
+				conversationDiv.appendChild(responsePara2);
+				//document.createTextNode(text);
+			}else if (lexResponse.message == "report"){
+				//responsePara.appendChild(document.createTextNode(lexResponse.message));
+				responsePara.appendChild(document.createElement('br'));
+
+				var responsePara = document.createElement("P");
+				responsePara.className = 'lexResponse';
+				responsePara.style="font-size:12px;"
+
+				var a_tag = document.createElement("a");
+				//responsePara.appendChild(document.createTextNode("Anchor"));
+				a_tag.href = "http://localhost/main/report";
+				//a_tag.alt = "Flash and JS are not enemies!";
+				a_tag.target = "_blank";
+				a_tag.style = "_blank";
+				//a_tag.appendChild(createTextNode("a"));
+
+				responsePara.appendChild(a_tag);
+				/*var img = document.createElement("img");
+				img.style="width: 200px;"
+				img.src = "https://s3.amazonaws.com/testbot170724/chatbot/img/12.jpg";
+				a_tag.appendChild(img);*/
+
+				var text = "Hot keyword";
+				a_tag.appendChild(document.createTextNode(text));
+
+				//document.createTextNode(text);
 			}else if(lexResponse.message) {
 				responsePara.appendChild(document.createTextNode(lexResponse.message));
 				responsePara.appendChild(document.createElement('br'));
@@ -507,6 +568,68 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			conversationDiv.appendChild(responsePara);
 			conversationDiv.scrollTop = conversationDiv.scrollHeight;
 		}
+		function pushImg() {
+			// if there is text to be sent...
+			var wisdomImg = document.getElementById('img_upload');
+			var wisdom = wisdomImg.value.trim();
+				wisdomImg.value = '...';
+				wisdomImg.locked = true;
+
+			if (wisdomImg && wisdomImg.value && wisdomImg.value.trim().length > 0) {
+				// disable input to show we're sending it
+				imgRequest(wisdom);
+				setTimeout(function(){ imgResponse(wisdom); }, 5000);
+				}
+
+
+
+			// we always cancel form submission
+			return false;
+		}
+
+		function imgRequest(daText) {
+
+			var conversationDiv = document.getElementById('conversation');
+			var requestPara = document.createElement("P");
+			requestPara.className = 'userRequest';
+			var imgPara = document.createElement("img");
+
+			imgPara.src = "https://s3.amazonaws.com/testbot170724/chatbot/img/sona.jpg"; //+ daText;
+			imgPara.height = 300;
+			imgPara.width = 200;
+			requestPara.appendChild(imgPara);
+			// requestPara.appendChild(document.createTextNode("    "));//+daText));
+			conversationDiv.appendChild(requestPara);
+			conversationDiv.scrollTop = conversationDiv.scrollHeight;
+		}
+
+		function imgResponse(lexResponse) {
+
+			var conversationDiv = document.getElementById('conversation');
+			var responsePara = document.createElement("P");
+			var responsePara2 = document.createElement("P");
+			responsePara.className = 'lexResponse';
+			responsePara2.className = 'lexResponse';
+			var imgPara = document.createElement("img");
+			imgPara.height = 300;
+			imgPara.width = 200;
+			var imgPara2 = document.createElement("img");
+			imgPara2.height = 300;
+			imgPara2.width = 200;
+			if(lexResponse == "sona.jpg"){
+			imgPara.src = "https://s3.amazonaws.com/testbot170724/chatbot/img/result_sona.jpg";
+			imgPara2.src = "https://s3.amazonaws.com/testbot170724/chatbot/img/oval.png";
+			}/*else{// }else if(lexResponse == "test.jpg"){
+			imgPara2.src = "https://s3.amazonaws.com/testbot170724/chatbot/img/1.jpg";
+			}*/
+			responsePara.appendChild(imgPara);
+			responsePara2.appendChild(imgPara2);
+
+			conversationDiv.appendChild(responsePara);
+			conversationDiv.appendChild(responsePara2);
+			conversationDiv.scrollTop = conversationDiv.scrollHeight;
+		}
+
 		// file upload
 		$(document).ready(function(){
    var fileTarget = $('.filebox .upload-hidden');

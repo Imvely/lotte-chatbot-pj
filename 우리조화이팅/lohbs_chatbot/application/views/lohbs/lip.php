@@ -12,7 +12,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta property="og:url" content="http://www.oliveyoung.co.kr/store/main/main.do">
 	<meta property="og:image" content="">
 	<meta property="og:description" content="대한민국 NO.1 헬스&뷰티 스토어 OLIVEYOUNG">
-	<title>페리페라 고양이밤 여리혈색핑크닝립 | 올리브영</title>
+	<title>페리페라 고양이밤 여리혈색핑크닝립 | 롭스</title>
 	<meta name="description" content="대한민국 NO.1 헬스&뷰티 스토어 OLIVEYOUNG">
 	
 
@@ -76,20 +76,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<li class="order"><a href="javascript:common.link.moveOrderList();">주문배송</a></li>
 				<li class="customer"><a href="javascript:common.link.moveCounselMain();">고객센터</a></li>
-				<li class="store"><a href="javascript:common.link.moveStoreMain();">올리브영 매장안내</a></li>
+				<li class="store"><a href="javascript:common.link.moveStoreMain();">롭스 매장안내</a></li>
 			</ul>
 		</div>
 		<div class="header_inner">
-			<h1><a href="javascript:common.link.moveMainHome();"><img src="http://image.oliveyoung.co.kr/pc-static-root/image/comm/h1_logo.png" alt="올리브영" /></a></h1>
+			<h1><a href="javascript:common.link.moveMainHome();"><img src="/img/lip/lobhs_logo.png" style="height:50px;" alt="롭스" /></a></h1>
 			
-			<div class="search_box" id="w_search_box">
+			 <div class="search_box" id="w_search_box" style = "border : 2px solid #ff4e00 !important;">
 	<input type="hidden" name="chkButton" 	 		id="chkButton" 		value="" />		
 				
 	
 				<input type="text" id="query" name="" value="" class="inp_placeholder"  data-placeholder="불쌍한 남자피부를위한, 남성 선크림" data-ref-linkUrl="http://www.oliveyoung.co.kr/store/planshop/getPlanShopDetail.do?dispCatNo=500000100040066"  onKeypress="javascript:pressCheck_WEB_MainSearch((event),this);"/>
 				
-				<button id="searchSubmit">검색</button>
+				 <button id="searchSubmit" style="background : url(/img/lip/lobhs_searchButton.png) no-repeat 50% 50% !important ;">검색</button>
 
+				<!-- 검색 레이어 영역 (디자인 수정 예정) -->
+				<!-- 검색 레이어 영역 (디자인 수정 예정) -->
 				<!-- 검색 레이어 영역 (디자인 수정 예정) -->
 				<div class="search_layer">
 					<div class="layer_inner">
@@ -1039,7 +1041,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script>
  
 var _mbrNo = '';
-
 var mnrSalePsbYn = $("#mnrSalePsbYn").val();
 </script>
 
@@ -1312,13 +1313,14 @@ var mnrSalePsbYn = $("#mnrSalePsbYn").val();
 					
 				
 					
-					<p class="prd_brand">
+					 <p class="prd_brand" style = "color:#ff4e00 !important;">
 						페리페라
 
 	
 		
-						<a href="javascript:;" class="link_brand goods_brand" id="moveBrandShop" >브랜드관</a>
-	
+					      <a href="javascript:;" class="link_brand2 goods_brandall" id="moveBrandShop" style = "border : 1px solid #ff4e00 !important; color :#ff4e00 !important;">브랜드 상품 전체보기</a>
+    
+                    
 	
 					
 					</p>
@@ -1330,7 +1332,7 @@ var mnrSalePsbYn = $("#mnrSalePsbYn").val();
 
 
 
-						<span class="icon_flag sale">세일</span>
+						<span class="icon_flag sale" style="background-color : #ff4e00 !important;">세일</span>
 	 
 
 
@@ -1352,7 +1354,7 @@ var mnrSalePsbYn = $("#mnrSalePsbYn").val();
 		
 						<li>
 							<span class="tx_tit">세일가</span> 
-							<span class="tx_cont cur_price"><span class="tx_num">4,000</span>원</span>
+							<span class="tx_cont cur_price"style="color :#ff4e00 !important;"><span class="tx_num">4,000</span>원</span>
 						</li>
 		
 	
@@ -1369,7 +1371,7 @@ var mnrSalePsbYn = $("#mnrSalePsbYn").val();
 						
 						<li>
 							<span class="tx_tit">카드할인혜택 <a href="javascript:goods.detail.openCardFullPop();" class="ico_info" data-rel="layer" data-target="cardBenefitInfo">카드혜택안내 레이어열기</a></span>
-							<span class="tx_cont bene_price">The CJ카드 추가 10%</span>
+							<span class="tx_cont bene_price">롯데 카드 추가 10%</span>
 						</li>
 						
 		
@@ -1380,7 +1382,7 @@ var mnrSalePsbYn = $("#mnrSalePsbYn").val();
 	
 		
 		
-							<span class="tx_tit">CJ ONE 포인트 예상적립</span>
+							<span class="tx_tit">롯데 카드 포인트 예상적립</span>
 		
 	
 							<span class="tx_cont">
@@ -1482,13 +1484,13 @@ var mnrSalePsbYn = $("#mnrSalePsbYn").val();
 	
 
 				
-				<div class="prd_total_price">
-					<span class="tx_tit">상품금액 합계</span>
+				<div class="prd_total_price"style="border-bottom :2px solid #ff4e00 !important;">
+					<span class="tx_tit"style="color :#ff4e00 !important;">상품금액 합계</span>
 					<input type="hidden" id="totalCnt" value="" name="totalCnt" />
 					<input type="hidden" id="totalPrc" value="" name="totalPrc" />
 
 
-					<span class="tx_cont"><span class="tx_num" id="totalPrcTxt">4000</span>원</span>
+					<span class="tx_cont"style="color :#ff4e00 !important;"><span class="tx_num" id="totalPrcTxt"style="color :#ff4e00 !important;">4000</span>원</span>
 
 				</div>
 				
@@ -1500,8 +1502,8 @@ var mnrSalePsbYn = $("#mnrSalePsbYn").val();
 	
 	
 				<div class="prd_btn_area">
-					<button class="btnBasket  goods_cart" onClick="javascript:goods.detail.bindBtnBasket();">장바구니</button>
-					<button class="btnBuy goods_buy" id="cartBtn" onClick="javascript:goods.detail.bindBtnBuy();">구매하기</button>
+					<button class="btnBasket  goods_cart" onClick="javascript:goods.detail.bindBtnBasket();"style="border : 1px solid #ff4e00  !important; color:#ff4e00 !important;">장바구니</button>
+					<button class="btnBuy goods_buy" id="cartBtn" onClick="javascript:goods.detail.bindBtnBuy();"style="background : #ff4e00  !important;">구매하기</button>
 					<button class="btnZzim  goods_wish" data-ref-goodsNo="A000000016871">찜하기</button>
 				</div>
 	
@@ -1530,7 +1532,7 @@ var mnrSalePsbYn = $("#mnrSalePsbYn").val();
 			
 			
 			<p>
-				<a href="javascript:;" class="btn_off_store goods_offline" data-rel="layer" data-target="offStoreStock" >올리브영 오프라인 매장 재고확인</a>
+				<a href="javascript:;" class="btn_off_store goods_offline" data-rel="layer" data-target="offStoreStock" >롭스 오프라인 매장 재고확인</a>
 			</p>
 			
 		</div>
@@ -1757,7 +1759,7 @@ var mnrSalePsbYn = $("#mnrSalePsbYn").val();
 		<h2 class="layer_title2">카드할인혜택</h2>
 		
 		<dl class="card_info_data">
-			<dt>THE CJ카드</dt>
+			<dt>롯데카드</dt>
 			<dd>결제 시 10% 할인</dd>
 		</dl>
 		
@@ -1868,26 +1870,17 @@ var mnrSalePsbYn = $("#mnrSalePsbYn").val();
 <script>
 var _ajax = common.Ajax;
 var _ajaxUrl = 'http://www.oliveyoung.co.kr/store/';
-
 var qtyAddUnit = '1';
-
 if ( qtyAddUnit == undefined || qtyAddUnit == '' || qtyAddUnit == 'null'){
     qtyAddUnit = '1';
 }
-
 var directDscntAmt = '';
 var salePrc = '4000';
-
 if ( directDscntAmt > 0 ){
     salePrc = '4000';
 }
-
-
 var _retType = ''; 
-
-
 var premiumGdasCnt = '1';
-
 var simpleGdasCnt = '2';
 </script>
 <link href="http://www.oliveyoung.co.kr/pc-static-root/css/goods.css?dumm=2502725" type="text/css" rel="stylesheet">
@@ -1895,7 +1888,6 @@ var simpleGdasCnt = '2';
 <script type="text/javascript" src="http://www.oliveyoung.co.kr/pc-static-root/js/goods/goods.js?dumm=2502725" charset="utf-8"></script>
 <script type="text/javascript" src="http://www.oliveyoung.co.kr/pc-static-root/js/mypage/gdas.js?dumm=2502725"></script>
 <script>
-
 var mKey = "";
 $(document).ready(function(){
     goods.detail.init();
@@ -1911,153 +1903,95 @@ $(document).ready(function(){
 	
 	<!-- #Footer -->
 	<div id="Footer">
-		<div class="oneConts">
-			<div class="conts">
-				<ul class="list-menu">
-					<li><a class="brandstory" href="http://www.oliveyoung.co.kr/store/company/brandStory.do">회사소개</a></li>
-					<li><a class="recruit" href="http://www.oliveyoung.co.kr/store/company/recruit.do">채용안내</a></li>
-					<li><a class="prvsuser" href="https://www.oliveyoung.co.kr/store/prvsuser/getPrvsuser.do">창업안내</a></li>
-					<li><a class="cjoyp" href="http://oypartner.cj.net/CJOYP/prvsuser/index/index.fo" target="_blank">상품입점 및 제휴문의</a></li>
-				</ul>
-				<div class="sel_family_group">
-					<a href="#" class="sel_option">CJ그룹 계열사 바로가기</a>
-					<div class="sel_option_list hide">
-						<dl>
-							<dt>CJ그룹</dt>
-							<dd><a href="http://www.cj.net/" target="_blank" title="CJ 주식회사 새창으로 열기">CJ주식회사</a></dd>
-						</dl>
-						<dl>
-							<dt>신유통</dt>
-							<dd><a href="http://www.cjoshopping.com/index.asp" target="_blank" title="CJ오쇼핑 새창으로 열기">CJ오쇼핑</a></dd>
-							<dd><a href="http://www.cjkoreaexpress.co.kr/web/kr/index.asp" target="_blank" title="CJ대한통운 새창으로 열기">CJ대한통운</a></dd>
-							<dd><a href="http://www.cjtelenix.com/" target="_blank" title="CJ텔레닉스 새창으로 열기">CJ텔레닉스</a></dd>
-							<dd><a href="http://www.cjolivenetworks.co.kr/" target="_blank" title="CJ올리브네트웍스 새창으로 열기">CJ올리브네트웍스</a></dd>
-						</dl>
-						<dl>
-							<dt>식품&amp;식품서비스</dt>
-							<dd><a href="http://www.cj.co.kr/cj-kr/" target="_blank" title="CJ제일제당 새창으로 열기">CJ제일제당</a></dd>
-							<dd><a href="http://www.cjfreshway.com/main/main.asp" target="_blank" title="CJ프레시웨이 새창으로 열기">CJ프레시웨이</a></dd>
-							<dd><a href="http://www.cjfoodville.co.kr/main.asp" target="_blank" title="CJ푸드빌 새창으로 열기">CJ푸드빌</a></dd>
-							<dd><a href="http://md1.co.kr/main.aspx" target="_blank" title="CJ엠디원 새창으로 열기">CJ엠디원</a></dd>
-						</dl>
-						<dl>
-							<dt>생명공학</dt>
-							<dd><a href="http://www.cj.co.kr/cj-kr/businesses/4/main" target="_blank" title="CJ제일제당 새창으로 열기">CJ제일제당</a></dd>
-							<dd><a href="http://www.cjp.co.kr/" target="_blank" title="CJ헬스케어 새창으로 열기">CJ헬스케어</a></dd>
-						</dl>
-						<dl>
-							<dt>엔터테인먼트&amp;미디어</dt>
-							<dd><a href="http://www.cjenm.com/" target="_blank" title="CJ E&M 새창으로 열기">CJ E&M</a></dd>
-							<dd><a href="http://www.cgv.co.kr/" target="_blank" title="CJ CGV 새창으로 열기">CJ CGV</a></dd>
-							<dd><a href="http://www.cjhellovision.com/" target="_blank" title="CJ헬로비전 새창으로 열기">CJ헬로비전</a></dd>
-							<dd><a href="http://www.cjpowercast.com/" target="_blank" title="CJ파워캐스트 새창으로 열기">CJ파워캐스트</a></dd>
-							<dd><a href="http://www.mnet.com/" target="_blank" title="CJ디지털뮤직 새창으로 열기">CJ디지털뮤직</a></dd>
-						</dl>
-						<dl>
-							<dt>인프라</dt>
-							<dd><a href="http://www.cjenc.co.kr/" target="_blank" title="CJ 건설 새창으로 열기">CJ건설</a></dd>
-						</dl>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="twoConts">
-			<div class="conts">
-				<ul class="list-area">
-					<li>
-						<p class="logo"><a href="javascript:common.link.moveMainHome();"><img src="http://image.oliveyoung.co.kr/pc-static-root/image/footer/foot_logo.png" alt="OLIVEYOUNG"></a></p>
-						<h2>씨제이 올리브네트웍스 주식회사</h2>
-						<p>대표이사 : 허민호 | 사업자등록번호 : 104-81-36565</p>
-						<p>주소 : (04323) 서울특별시 용산구 한강대로 366, 10층 <br>(동자동, 트윈시티)</p>
-						<p>통신판매업신고번호 : 2017-서울용산-0451</p>
-						<p>개인정보보호책임자 : 이다운 <a class="link" href="javascript:common.link.openFtcBizInfo();">사업자 정보확인 &gt;</a></p>
-					</li>
-					<li>
-						<ul class="list-link">
-							<li><a href="javascript:common.link.moveTermsPage();">이용약관</a><a href="javascript:common.link.moveLegalPage();">법적고지</a></li>
-							<li><a href="javascript:common.link.movePrivacyPage();">개인정보처리방침</a></li>
-							<li><a href="javascript:common.link.moveYouthProtectionPage();">청소년보호방침</a></li>
-							<li><a href="javascript:common.link.moveMultimediaPage();">영상정보처리기기운영/관리방침</a></li>
-							<li><a href="javascript:common.link.moveDenyEmailPage();">이메일무단수집거부</a></li>
-						</ul>
-					</li>
-					<li>
-						<h2>LG U+ 매매보호(에스크로) 서비스</h2>
-						<p>
-							고객님은 안전거래를 위해 모든거래 결제시<br>저희 쇼핑몰에서 가입한 LG U+ 전자 결제의<br>매매보호(에스크로) 서비스를 이용하실 수<br>있습니다.<br>
-							<a class="link" href="javascript:common.link.openLGUPEscrow();">서비스 가입사실 확인 &gt;</a>
-						</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="threeConts">
-			<div class="conts">
-				<p class="copyright">Copyright ⓒ 2017 CJ OliveNetworks. All Rights Reserved.</p>
-				<div class="sns">
-					<h2>OLIVE YOUNG SNS</h2>
-					<a class="facebook" href="https://www.facebook.com/OLIVEYOUNG" title="페이지 이동" target="_blank"><img src="http://image.oliveyoung.co.kr/pc-static-root/image/footer/@facebook.gif" alt="페이스북"></a>
-					<a class="twitter" href="https://twitter.com/oliveyoung" title="페이지 이동" target="_blank"><img src="http://image.oliveyoung.co.kr/pc-static-root/image/footer/@twitter.gif" alt="트위터"></a>
-					<a class="kakao" href="javascript:common.link.openKakao();" title="페이지 이동" ><img src="http://image.oliveyoung.co.kr/pc-static-root/image/footer/@kakaotalk.gif" alt="카카오톡"></a>
-					<a class="cafe" href="http://cafe.naver.com/oytrendholic/" title="페이지 이동" target="_blank"><img src="http://image.oliveyoung.co.kr/pc-static-root/image/footer/@oliveyo.gif" alt="올리브영"></a>
-					<a class="insta" href="https://www.instagram.com/oliveyoung_official/" title="페이지 이동" target="_blank"><img src="http://image.oliveyoung.co.kr/pc-static-root/image/footer/@instagram.gif" alt="인스타그램"></a>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="oneConts">
+            <div class="conts">
+                <ul class="list-menu">
+                    <li><a class="brandstory" href="http://www.oliveyoung.co.kr/store/company/brandStory.do">회사소개</a></li>
+                    <li><a class="recruit" href="http://www.oliveyoung.co.kr/store/company/recruit.do">채용안내</a></li>
+                    <li><a class="prvsuser" href="https://www.oliveyoung.co.kr/store/prvsuser/getPrvsuser.do">창업안내</a></li>
+                    <li><a class="cjoyp" href="http://oypartner.cj.net/CJOYP/prvsuser/index/index.fo" target="_blank">상품입점 및 제휴문의</a></li>
+                </ul>
+                <div class="sel_family_group">
+                    <a href="#" class="sel_option">롯데그룹 계열사 바로가기</a>
+                    <div class="sel_option_list hide">
+                        <dl>
+                            <dt>롯데그룹</dt>
+                            <dd><a href="http://www.cj.net/" target="_blank" title="CJ 주식회사 새창으로 열기">롯데</a></dd>
+                        </dl>
+                        <dl>
+                            <dt>신유통</dt>
+                            <dd><a href="http://www.cjoshopping.com/index.asp" target="_blank" title="CJ오쇼핑 새창으로 열기">롯데홈쇼핑</a></dd>
+                        
+                      
+                         
+                        
+                        <d
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="twoConts">
+            <div class="conts">
+                
+            </div>
+        </div>
+        <div class="threeConts">
+            <div class="conts">
+                <p class="copyright">Copyright ⓒ 2017 Lobhs. All Rights Reserved.</p>
+                <div class="sns">
+                    <h2>Lotte SNS</h2>
+                    <a class="facebook" href="https://www.facebook.com/OLIVEYOUNG" title="페이지 이동" target="_blank"><img src="http://image.oliveyoung.co.kr/pc-static-root/image/footer/@facebook.gif" alt="페이스북"></a>
+                    <a class="twitter" href="https://twitter.com/oliveyoung" title="페이지 이동" target="_blank"><img src="http://image.oliveyoung.co.kr/pc-static-root/image/footer/@twitter.gif" alt="트위터"></a>
+                    <a class="kakao" href="javascript:common.link.openKakao();" title="페이지 이동" ><img src="http://image.oliveyoung.co.kr/pc-static-root/image/footer/@kakaotalk.gif" alt="카카오톡"></a>
+                    <a class="cafe" href="http://cafe.naver.com/oytrendholic/" title="페이지 이동" target="_blank"><img src="http://image.oliveyoung.co.kr/pc-static-root/image/footer/@oliveyo.gif" alt="롭스"></a>
+                    <a class="insta" href="https://www.instagram.com/oliveyoung_official/" title="페이지 이동" target="_blank"><img src="http://image.oliveyoung.co.kr/pc-static-root/image/footer/@instagram.gif" alt="인스타그램"></a>
+                </div>
+            </div>
+        </div>
+    </div>
 	<!-- //#Footer -->
 </div>
-
-
 
 
 
 <script type="text/javascript">
 var _isLoginPage =false;
 if(_isLoginPage){
-	if (history.state == null) {
-	    history.replaceState({status:"check"}, null, null);
-	    history.pushState({status:"checkPage"}, null, null);
-	}
-	
-	// 백키
-	$(window).bind("popstate", function() {
-	    if (history.state != null && history.state.status == "check") {
-			//로그인페이지 통한 진입 메인페이지 이동       
-			location.href = _baseUrl + "main/main.do";
-	    }
-	});
+    if (history.state == null) {
+        history.replaceState({status:"check"}, null, null);
+        history.pushState({status:"checkPage"}, null, null);
+    }
+    
+    // 백키
+    $(window).bind("popstate", function() {
+        if (history.state != null && history.state.status == "check") {
+            //로그인페이지 통한 진입 메인페이지 이동       
+            location.href = _baseUrl + "main/main.do";
+        }
+    });
 }
 $('.sel_family_group').find('.sel_option').on({
-	'click' : function(e){
-		e.preventDefault();
-		$(this).parent().find('.sel_option_list').toggleClass('hide');
-
-	}
+    'click' : function(e){
+        e.preventDefault();
+        $(this).parent().find('.sel_option_list').toggleClass('hide');
+    }
 });
-
-
 var _gaUaKey = "UA-92021806-1";
 var _wlDomain = "www.oliveyoung.co.kr";
-
-
 //복사/선택 방지 소스
 $(window).load(function() {
-
-	//기본 상단 GNB & 슬라이드 바 처리
-	common.gnb.init();
-
-	//LazyLoad 실행
-	common.setLazyLoad();
-
-	//공통 둥둥이 배너 실행
-	$('.main_moving_banner').length && common.bann.init();
+    //기본 상단 GNB & 슬라이드 바 처리
+    common.gnb.init();
+    //LazyLoad 실행
+    common.setLazyLoad();
+    //공통 둥둥이 배너 실행
+    $('.main_moving_banner').length && common.bann.init();
  
-	var parser = new UserAgentUtil(navigator.userAgent);
-	// alert(parser.getBrowser().name + " : " + parser.getBrowser().version);
- 	if (parser.getBrowser().name.indexOf("msie") >= 0 && (parser.getBrowser().version.startWith("8") || parser.getBrowser().version.startWith("7"))) {
-		$(".infoUpgr").show();
-	}
+    var parser = new UserAgentUtil(navigator.userAgent);
+    // alert(parser.getBrowser().name + " : " + parser.getBrowser().version);
+    if (parser.getBrowser().name.indexOf("msie") >= 0 && (parser.getBrowser().version.startWith("8") || parser.getBrowser().version.startWith("7"))) {
+        $(".infoUpgr").show();
+    }
  
 // $.fn.disableSelection = function() {
 //     document.documentElement.style.webkitUserSelect='none';
@@ -2084,12 +2018,10 @@ $(window).load(function() {
 //              .unbind('selectstart', true)
 //              .unbind('mousedown');
 // };
-
 });
-
 </script>
 
-<script src="http://www.oliveyoung.co.kr/pc-static-root/js/common/common.weblog.js?dumm=2502725" charset="utf-8"></script>
+<script src="http://www.oliveyoung.co.kr/pc-static-root/js/common/common.weblog.js?dumm=2502723" charset="utf-8"></script>
 
 
 
@@ -2130,11 +2062,9 @@ document.writeln("<scr"+"ipt language='javascript' src='" + TRS_URL + "'></scr"+
 </div>
 
 <div id="tempHtml" class="contEditor" style="display:none">
-	
-		<p><img alt="" src="/img/product/KittenbalmPinktintedlip4.jpg" style="border:0px solid #000000; vertical-align:baseline" title="" /></p>
-
-	
-</div>
+    
+        <html>
+<head></head>
+<body><img title="" style="border: 0px solid rgb(0, 0, 0); border-image: none; vertical-align: baseline;" alt="" src="/img/product/KittenbalmPinktintedlip4.jpg">
 </body>
 </html>
-
