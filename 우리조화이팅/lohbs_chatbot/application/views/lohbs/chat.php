@@ -296,11 +296,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<form action="" method="post" enctype="multipart/form-data">
 
 		<div class="filebox bs3-primary preview-image" style="margin-top: 15px;">
-	        <input class="upload-name" value="파일선택" disabled="disabled" style="border-radius: 25px; width: 165px;color: #ccc;">
+	        <input class="upload-name" id="img_upload" value="파일선택" disabled="disabled" style="border-radius: 25px; width: 165px;color: #ccc;">
 
 	        <label style="font-size: 17px;margin-left: 5px; padding: 6px 8px 8px 8px; border-radius: 50px; margin-top: 2px;" for="input_file">search</label> 
 	        <input type="file" id="input_file" class="upload-hidden"> 
-	      	<input type="submit" value="upload" id="input_submit" class="upload-hidden">
+	      	<input type="button" value="upload" id="input_submit" class="upload-hidden" onclick="pushImg()">
 	    </div>
 	   <!--  <div class="upload">
 	        <input class="btn btn-primary" type="file" name="upload"/>
@@ -368,7 +368,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						if(wisdom != "20000"){
 						showResponse(data);
 						}else {
-							data.message = "ttttttttt";
+							data.message = "test";
 							showResponse(data);
 						}
 					}
@@ -380,6 +380,67 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			// we always cancel form submission
 			return false;
 		}
+
+
+
+		function pushImg() {
+			// if there is text to be sent...
+			var wisdomImg = document.getElementById('img_upload');
+			var wisdom = wisdomImg.value.trim();
+				wisdomImg.value = '...';
+				wisdomImg.locked = true;
+
+			if (wisdomImg && wisdomImg.value && wisdomImg.value.trim().length > 0) {
+				// disable input to show we're sending it
+				imgRequest(wisdom);
+				// interval
+				imgResponse(wisdom);
+				}
+
+
+
+			// we always cancel form submission
+			return false;
+		}
+
+		function imgRequest(daText) {
+
+			var conversationDiv = document.getElementById('conversation');
+			var requestPara = document.createElement("P");
+			requestPara.className = 'userRequest';
+			var imgPara = document.createElement("img");
+			imgPara.src = "http://pds.joins.com/news/component/moneytoday/201211/06/2012110613573417444_1.jpg"; //+ daText;
+			imgPara.height = 300;
+			imgPara.width = 200;
+			requestPara.appendChild(imgPara);
+			// requestPara.appendChild(document.createTextNode("    "));//+daText));
+			conversationDiv.appendChild(requestPara);
+			conversationDiv.scrollTop = conversationDiv.scrollHeight;
+		}
+
+		function imgResponse(lexResponse) {
+
+			var conversationDiv = document.getElementById('conversation');
+			var responsePara = document.createElement("P");
+			responsePara.className = 'lexResponse';
+			var imgPara = document.createElement("img");
+			imgPara.height = 300;
+			imgPara.width = 200;
+
+			if(lexResponse == "파일선택"){
+			imgPara.src = "http://image.newstomato.com/newsimg/2013/5/27/366864/1.jpg";
+			}else{// }else if(lexResponse == "test.jpg"){
+			imgPara.src = "http://pds.joins.com/news/component/moneytoday/201211/06/2012110613573417444_1.jpg";
+			}
+			responsePara.appendChild(imgPara);
+
+			conversationDiv.appendChild(responsePara);
+			conversationDiv.scrollTop = conversationDiv.scrollHeight;
+		}
+
+
+
+
 		function showRequest(daText) {
 			var conversationDiv = document.getElementById('conversation');
 			var requestPara = document.createElement("P");
@@ -397,14 +458,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			conversationDiv.scrollTop = conversationDiv.scrollHeight;
 		}
 		function showResponse(lexResponse) {
-			//console.log(lexResponse.message);
+			console.log(lexResponse.message);
 			var conversationDiv = document.getElementById('conversation');
 			var responsePara = document.createElement("P");
 			responsePara.className = 'lexResponse';
-			if (lexResponse.message) {
+			if(lexResponse.message == "test"){
+				//responsePara.appendChild(document.createTextNode(lexResponse.message));
+				responsePara.appendChild(document.createElement('br'));
+
+				var responsePara = document.createElement("P");
+				responsePara.className = 'lexResponse';
+				responsePara.style="font-size:12px;"
+
+				var a_tag = document.createElement("a");
+				//responsePara.appendChild(document.createTextNode("Anchor"));
+				a_tag.href = "http://localhost/main/bbcream";
+				a_tag.alt = "Flash and JS are not enemies!";
+				a_tag.target = "_blank";
+				a_tag.style = "_blank";
+				//a_tag.appendChild(createTextNode("a"));
+
+				responsePara.appendChild(a_tag);
+				var img = document.createElement("img");
+				img.style="width: 200px;"
+				img.src = "https://s3.amazonaws.com/testbot170724/chatbot/img/12.jpg";
+				a_tag.appendChild(img);
+
+				var text = "Dr.JART for man (BB Block)";
+				var price = "23200 won";
+				a_tag.appendChild(document.createTextNode(text));
+				a_tag.appendChild(document.createElement('br'));
+				a_tag.appendChild(document.createTextNode(price));
+				//document.createTextNode(text);
+
+			}else if(lexResponse.message) {
 				responsePara.appendChild(document.createTextNode(lexResponse.message));
 				responsePara.appendChild(document.createElement('br'));
 			}
+
 			if (lexResponse.dialogState === 'ReadyForFulfillment') {
 				responsePara.appendChild(document.createTextNode(
 					'Ready for fulfillment'));

@@ -23,18 +23,28 @@ class Main extends CI_Controller {
   public function data()
   {
     $info = $_POST['info'];
-    if (substr($info, -3) == "won"){
+    /*if (substr($info, -3) == "won"){
        error_log($info); 
+    }*/
+
+    if ($info == "20000"){
+      error_log($info);
     }
    
     
     //error_log($info);
   }
 
-  public function search_cos()
+  public function bbcream()
   {
     $data = array();
-    $this->load->view('lohbs/search_cos', $data);
+    $this->load->view('lohbs/bbcream', $data);
+  }
+
+  public function lip()
+  {
+    $data = array();
+    $this->load->view('lohbs/lip', $data);
   }
 
   public function report()

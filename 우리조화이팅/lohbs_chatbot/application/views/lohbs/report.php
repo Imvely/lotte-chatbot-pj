@@ -13,13 +13,13 @@ var svg = d3.select("svg"),
 
 var format = d3.format(",d");
 
-var color = d3.scaleOrdinal(d3.schemeCategory20c);
+var color = d3.scaleOrdinal(d3.schemeCategory20);
 
 var pack = d3.pack()
     .size([width, height])
-    .padding(5.5);
+    .padding(3.5);
 
-d3.csv("https://s3.amazonaws.com/testbot170724/chatbot/hi2.csv", function(d) {
+d3.csv("https://s3.amazonaws.com/testbot170724/chatbot/data_2.csv", function(d) {
   d.value = +d.value;
   if (d.value) return d;
 }, function(error, classes) {
@@ -31,7 +31,7 @@ d3.csv("https://s3.amazonaws.com/testbot170724/chatbot/hi2.csv", function(d) {
         if (id = d.data.id) {
           var id, i = id.lastIndexOf(".");
           d.id = id;
-          d.package = id.slice(0, i);
+          d.package = id.slice(0, 20);
           d.class = id.slice(i + 1);
         }
       });
